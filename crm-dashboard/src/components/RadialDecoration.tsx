@@ -38,7 +38,7 @@ export default function RadialDecoration({ isLoading = false, loadingHueDeg = 12
   }, [isLoading]);
 
   return (
-    <div className="relative w-full flex justify-center mt-6">
+    <div className="relative w-full flex justify-center mt-0">
       <svg width="740" height="320" viewBox="0 0 740 320" fill="none">
         <defs>
           {/* blue inner core with slight vertical depth */}
@@ -140,6 +140,7 @@ export default function RadialDecoration({ isLoading = false, loadingHueDeg = 12
               stroke="url(#loadGrad)"
               strokeWidth="10"
               strokeLinecap="round"
+
               fill="none"
               className="animate-dash"
               style={{ strokeDasharray: "160 820" }}
@@ -174,5 +175,6 @@ export default function RadialDecoration({ isLoading = false, loadingHueDeg = 12
     </div>
   );
 }
+
 
 
