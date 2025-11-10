@@ -1,8 +1,11 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders navbar title', () => {
-  render(<App />);
-  expect(screen.getByText(/All Client Data/i)).toBeInTheDocument();
+test('renders login page when not authenticated', () => {
+  // Clear any existing authentication
+  localStorage.clear();
+  const { getByText } = render(<App />);
+  // Check if login page is rendered
+  expect(getByText(/LOGIN/i)).toBeInTheDocument();
 });
